@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.iPad.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch.iPad" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="DetailsViewController">
+            <connections>
+                <outlet property="_labText" destination="gXx-bV-7wg" id="a1j-mT-SiP"/>
+                <outlet property="_labTitle" destination="2fw-Um-bWJ" id="xa2-ML-xU0"/>
+                <outlet property="_labTitme" destination="bLT-An-9MN" id="KsP-ii-3WA"/>
+                <outlet property="view" destination="iN0-l3-epB" id="Wqa-RW-VbS"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="768" height="1024"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bLT-An-9MN">
+                    <rect key="frame" x="24" y="57" width="682" height="21"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="21" id="2EB-ya-Hut"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fw-Um-bWJ">
+                    <rect key="frame" x="24" y="32" width="682" height="17"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gXx-bV-7wg">
+                    <rect key="frame" x="8" y="81" width="752" height="507"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="507" id="9SU-sQ-X0R"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="bLT-An-9MN" firstAttribute="trailing" secondItem="2fw-Um-bWJ" secondAttribute="trailing" id="128-3N-cSm"/>
+                <constraint firstItem="gXx-bV-7wg" firstAttribute="top" secondItem="bLT-An-9MN" secondAttribute="bottom" constant="3" id="B3x-hJ-I0F"/>
+                <constraint firstItem="gXx-bV-7wg" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leadingMargin" id="KOE-xo-f3a"/>
+                <constraint firstAttribute="trailing" secondItem="bLT-An-9MN" secondAttribute="trailing" constant="62" id="Pxt-vL-etZ"/>
+                <constraint firstItem="bLT-An-9MN" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="24" id="QbU-VS-4rA"/>
+                <constraint firstItem="gXx-bV-7wg" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="81" id="bWg-5l-4vd"/>
+                <constraint firstItem="bLT-An-9MN" firstAttribute="leading" secondItem="2fw-Um-bWJ" secondAttribute="leading" id="skf-z4-CPV"/>
+                <constraint firstItem="bLT-An-9MN" firstAttribute="top" secondItem="2fw-Um-bWJ" secondAttribute="bottom" constant="8" symbolic="YES" id="wlj-Zu-Nr5"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="1866" y="418"/>
+        </view>
+    </objects>
+    <simulatedMetricsContainer key="defaultSimulatedMetrics">
+        <simulatedStatusBarMetrics key="statusBar"/>
+        <simulatedOrientationMetrics key="orientation"/>
+        <simulatedScreenMetrics key="destination"/>
+    </simulatedMetricsContainer>
+</document>

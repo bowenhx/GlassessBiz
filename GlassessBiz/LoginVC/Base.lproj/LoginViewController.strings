@@ -1,0 +1,15 @@
+
+/* Class = "IBUILabel"; text = "Password："; ObjectID = "1mw-DY-myh"; */
+"1mw-DY-myh.text" = "Password：";
+
+/* Class = "IBUIButton"; normalTitle = "Forgot  password"; ObjectID = "4P8-QO-raL"; */
+"4P8-QO-raL.normalTitle" = "Forgot  password";
+
+/* Class = "IBUILabel"; text = "Email："; ObjectID = "5MX-yj-Ks9"; */
+"5MX-yj-Ks9.text" = "Email：";
+
+/* Class = "IBUIButton"; normalTitle = "Login"; ObjectID = "Bbn-9u-Izy"; */
+"Bbn-9u-Izy.normalTitle" = "Login";
+
+/* Class = "IBUIButton"; normalTitle = "Register"; ObjectID = "Nkt-Kt-oZ9"; */
+"Nkt-Kt-oZ9.normalTitle" = "Register";

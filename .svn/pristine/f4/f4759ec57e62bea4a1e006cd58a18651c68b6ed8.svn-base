@@ -1,0 +1,76 @@
+//
+//  Prefix header
+//
+//  The contents of this file are implicitly included at the beginning of every source file.
+//
+
+#import <Availability.h>
+
+#ifndef __IPHONE_3_0
+#warning "This project uses features only available in iOS SDK 3.0 and later."
+#endif
+
+#ifdef __OBJC__
+    #import <UIKit/UIKit.h>
+    #import <Foundation/Foundation.h>
+    #import "BaseViewController.h"
+    #import "BaseTableViewController.h"
+#endif
+
+
+#define iOS7 ([[UIDevice currentDevice].systemVersion floatValue] >= 7.0)
+
+#define RGBCOLOR(r,g,b)  [UIColor colorWithRed:(r)/255.0 green:(g)/255.0 blue:(b)/255.0 alpha:1]
+
+#define iPhone5  ([UIScreen instancesRespondToSelector:@selector(currentMode)] ? CGSizeEqualToSize(CGSizeMake(640, 1136), [[UIScreen mainScreen] currentMode].size) : NO)
+
+#define isPad (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad)
+#define isIphone (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPhone)
+
+
+//共用的减去导航条跟tabbar的高度
+#define CommonViewHeight(v) iOS7 ? HEIGHT(v) - 108 : HEIGHT(v) - 88
+//共用的减去导航条高度
+#define CommonMinusNavHeight(v) iOS7 ? HEIGHT(v) - 64 : HEIGHT(v) - 44
+
+// View 坐标(x,y)和宽高(width,height)
+#define SCREEN_HEIGHT       [UIScreen mainScreen].bounds.size.height
+#define SCREEN_WIDTH        [UIScreen mainScreen].bounds.size.width
+#define X(v)                    (v).frame.origin.x
+#define Y(v)                    (v).frame.origin.y
+#define WIDTH(v)                (v).frame.size.width
+#define HEIGHT(v)               (v).frame.size.height
+#define HEIGHTADDY(v)           (v).frame.size.height + (v).frame.origin.y
+#define WIDTHADDX(v)            (v).frame.size.width + (v).frame.origin.x
+
+
+#define ColorWithString( X ) [UIColor colorWithHexString:X]
+#define RELEASE_SAFELY(__POINTER) { [__POINTER release]; __POINTER = nil; }
+
+
+// Release methods
+//#define RELEASE_SAFELY(__POINTER)     { [__POINTER release]; __POINTER = nil; }
+//#define CLEAR_REQUEST(__REQUEST)      { [__REQUEST clearDelegatesAndCancel]; __REQUEST = nil;}
+//#define AUTORELEASE_SAFELY(__POINTER) { [__POINTER autorelease]; __POINTER = nil; }
+
+
+
+#ifdef DEBUG
+#  define LOG(fmt, ...) do { \
+NSString* file = [[NSString alloc] initWithFormat:@"%s", __FILE__]; \
+NSLog((@"%@(%d) " fmt), [file lastPathComponent], __LINE__, ##__VA_ARGS__); \
+\
+} while(0)
+#  define LOG_METHOD NSLog(@"%s", __func__)
+#  define LOG_CMETHOD NSLog(@"%@/%@", NSStringFromClass([self class]), NSStringFromSelector(_cmd))
+#  define RETAIN_COUNT(p) NSLog(@"%s(%d): count = %d\n", __func__, __LINE__, [p retainCount]);
+#  define LOG_TRACE(x) do {printf x; putchar('\n'); fflush(stdout);} while (0)
+#else
+#  define LOG(...)
+#  define LOG_METHOD
+#  define LOG_CMETHOD
+#  define RETAIN_COUNT(p)
+#  define LOG_TRACE(x)
+
+
+#endif
